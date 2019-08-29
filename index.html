@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+/* 
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+} */
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  padding-top: 16px;
+}
+#message{
+    text-align: center;
+    color: red;
+}
+#main{
+    width: 40%;
+    margin: auto;
+}
+button{
+  width: 48% !important;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  
+}
+.nav {
+        background-color: dodgerblue !important;
+    }
+</style>
+</head>
+<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBWiHA8lzyCm4H9RMGE-1F9FeROhEoAblU",
+    authDomain: "tagline-finder-web.firebaseapp.com",
+    databaseURL: "https://tagline-finder-web.firebaseio.com",
+    projectId: "tagline-finder-web",
+    storageBucket: "tagline-finder-web.appspot.com",
+    messagingSenderId: "1033799822902",
+    appId: "1:1033799822902:web:0fbb9e53748ccec6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
+<body>
+    <nav class="nav">
+        <div class="nav-wrapper">
+            <a href="#" style="margin-left: 10px">Typing test</a>
+           
+        </div>
+    </nav>
+
+
+
+<div id="main">
+<h2 style="text-align:center; font-family: 'Courier New', Courier, monospace" >signup Form</h2>
+
+<form>
+  <div class="imgcontainer">
+    <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter email" name="uname" required id="inpt1" value="email">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required id="inpt2" value="password">
+        
+    <!-- <button type="button" onclick="login()">Login</button> -->
+    <button type="button" class="waves-effect waves-light btn-large" width="300px" onclick="signup()">Signup</button>
+    <button type="button" class="waves-effect waves-light btn-large" width="300px" onclick="siginin()">login</button>
+
+   
+  </div>
+  <div class="span.psw" id="message">
+  </div>
+ 
+</form>
+</div>
+<script src="index.js"></script>
+<script>
+function siginin(){
+    window.location.href="login.html";
+}
+</script>
+</body>
+</html>
